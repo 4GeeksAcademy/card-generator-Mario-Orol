@@ -1,1 +1,39 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  background: green;
+}
+.card {
+  width: 400px;
+  height: 600px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 90px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+#top_suit {
+  font-size: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#num {
+  font-size: 160px;
+  font-style: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#bottom_suit {
+  font-size: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(180deg);
+}
+/*.custom-height {
+  height: 266px;
+} */
+.red {
+  color: red;
+}

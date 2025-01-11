@@ -3,27 +3,88 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>Random Card Generator-Mario Orol</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
       integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="./4geeks.ico" />
   </head>
   <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+    <div id="card" class="card container-fluid mt-5 ">
+      <div id="top-suit" class="text-start">♥</div>
+      <div id="num" class="text-center">3</div>
+      <div id="bottom-suit" class="text-end pt-5">♥</div>
+    </div>
+    <br />
+    <div class="container text-center mt-5 text-center">
+      <!-- Button that generates a card -->
+      <div class="row g-0 text-center">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <button
+            id="generateCard"
+            type="button"
+            class="btn btn-light btn-lg text-center"
+          >
+            New Card
+          </button>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+      <br />
+      <!-- Timmer that generates a card -->
+      <div class="row g-0 text-center">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <h1>Countdown Timer</h1>
+          <div id="timer" class="display-2 py-3 border rounded bg-light">
+            00:00:00
+          </div>
+          <button id="startTimer" class="btn btn-light btn-lg mt-3">
+            Start Timer
+          </button>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+      <br />
+      <!-- User specify the card width and height -->
+      <div class="row g-3">
+        <!-- Width Input -->
+        <div class="col-md-6">
+          <div class="input-group">
+            <span class="input-group-text">Width</span>
+            <input
+              id="widthInput"
+              type="number"
+              class="form-control"
+              placeholder="Enter width"
+              aria-label="Width"
+            />
+            <span class="input-group-text">px</span>
+          </div>
+        </div>
+
+        <!-- Height Input -->
+        <div class="col-md-6">
+          <div class="input-group">
+            <span class="input-group-text">Height</span>
+            <input
+              id="heightInput"
+              type="number"
+              class="form-control"
+              placeholder="Enter height"
+              aria-label="Height"
+            />
+            <span class="input-group-text">px</span>
+          </div>
+        </div>
       </div>
     </div>
+
+    <script src="app.js"></script>
   </body>
 </html>
